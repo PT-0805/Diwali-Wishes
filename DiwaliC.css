@@ -1,0 +1,104 @@
+/* General styling for both desktop and mobile */
+body {
+    background-color: #0D1B2A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #FFC300;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    max-width: 90%;
+}
+
+button {
+    background-color: #FFC300;
+    color: #0D1B2A;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    max-width: 100%;
+    width: 250px;
+}
+
+button:hover {
+    background-color: #FF5733;
+}
+
+#message {
+    font-size: 26px;
+    margin-top: 20px;
+    animation: glow 1.5s infinite alternate;
+    padding: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes glow {
+    from { color: #FFC300; }
+    to { color: #FF5733; }
+}
+
+/* Fireworks and sparkler background animation */
+.fireworks {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 1;
+    background: #0D1B2A;
+    animation: sparkles 3s infinite;
+}
+
+/* Sparkle styling for animation */
+.sparkle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #FFD700, transparent 70%);
+    border-radius: 50%;
+    opacity: 0;
+    animation: sparkle-animation 1.5s infinite ease-in-out;
+}
+
+/* Animation keyframes for sparkles */
+@keyframes sparkle-animation {
+    from {
+        transform: translateY(0) scale(0.5);
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+        transform: translateY(-30px) scale(1);
+    }
+    to {
+        transform: translateY(-60px) scale(0.5);
+        opacity: 0;
+    }
+}
+
+/* Responsive share button styling */
+#share-btn {
+    background-color: #FF5733;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
